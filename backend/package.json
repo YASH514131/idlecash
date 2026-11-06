@@ -1,0 +1,31 @@
+{
+  "name": "idlecash-backend",
+  "version": "1.0.0",
+  "description": "IdleCash backend API for 1inch Aqua strategies",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "dev:fork": "node scripts/start-local-fork-backend.cjs",
+    "fork:base": "ganache --fork.url https://mainnet.base.org --server.host 0.0.0.0 --server.port 8545 --chain.chainId 84531 --chain.networkId 84531 --wallet.totalAccounts 10 --wallet.defaultBalance 1000 --wallet.unlockedAccounts 0x2230393edad0299b7e7b59f20aa856cd1bed52e1",
+    "fund:fork": "node scripts/fund-local-fork.cjs"
+  },
+  "dependencies": {
+    "@1inch/aqua-sdk": "0.4.0",
+    "@1inch/sdk-core": "0.2.0",
+    "@1inch/swap-vm-sdk": "0.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "viem": "^2.19.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "ganache": "^7.9.2"
+  }
+}
