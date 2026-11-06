@@ -1,0 +1,29 @@
+name: idlecash_frontend
+description: "IdleCash - Self-custodial 1inch Aqua strategies on Base"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  http: ^1.2.2
+  intl: ^0.20.1
+  provider: ^6.1.2
+  reown_appkit: 1.5.0
+  shared_preferences: ^2.3.2
+  url_launcher: ^6.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - lib/assets/images/
